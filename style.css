@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+.table {
+  height: 50px;
+  width: 500px;
+  border: 3px solid #a37c82;
+  background-color: #f2f1ef;
+}
+
+.ball::before {
+  content: "A";
+  color: #f2f1ef;
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  text-align: center;
+  background-color: #6e304b;
+
+  animation-name: move;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  to {
+    transform: translateX(400px) rotate(360deg);
+  }
+}
